@@ -24,8 +24,8 @@
       </div>
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1 bubble solved">Apparent Magnitude <em>(m)</em> = 4.7</div>
-        <div class="col-xs-3 col-xs-offset-1 bubble solved">Parallax = 0.742 <em>"</em> </div>
-        <div class="col-xs-3 col-xs-offset-1 bubble solved">λ <sub>Max</sub> = 289 <em>nm</em></div>
+        <div class="col-xs-3 col-xs-offset-1 bubble solved">Parallax = 0.173 <em>"</em> </div>
+        <div class="col-xs-3 col-xs-offset-1 bubble solved">λ <sub>Max</sub> = 289 nanometers <em>nm</em></div>
       </div>
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-down arrow"></span></div>
@@ -35,26 +35,26 @@
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-down arrow"></span></div>
         <div class="col-xs-3 col-xs-offset-1 bubble open" id="distance">Find the Distance <em>(d)</em></div>
-        <div class="col-xs-3 col-xs-offset-1 bubble open">Find the Temperature <em>(T)</em></div>
+        <div class="col-xs-3 col-xs-offset-1 bubble open" id="temperature">Find the Temperature <em>(T)</em></div>
       </div>
       <div class="row">
-        <div class="col-xs-3 col-xs-offset-1 bubble closed">Find the Absolute Magnitude <em>M</em></div>
+        <div class="col-xs-3 col-xs-offset-1 bubble open" id="absMag">Find the Absolute Magnitude <em>M</em></div>
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-left arrow"></span></div>
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-down arrow"></span></div>
       </div>
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-down arrow"></span></div>
-        <div class="col-xs-3 col-xs-offset-5 bubble closed">
+        <div class="col-xs-3 col-xs-offset-5 bubble open" id="powerPerMeter">
           Find the Power per meter squared <em>P <sub>m <sup>2</sup></sub></em>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-3 col-xs-offset-1 bubble closed">Find the Total Power</div>
+        <div class="col-xs-3 col-xs-offset-1 bubble open" id="totalPower">Find the Total Power</div>
         <div class="col-xs-3 col-xs-offset-5"><span class="glyphicon glyphicon-arrow-down arrow"></span></div>
       </div>
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-right arrow"></span></div>
-        <div class="col-xs-3 col-xs-offset-1 bubble closed">Find the Size of the Star</div>
+        <div class="col-xs-3 col-xs-offset-1 bubble open" id="area">Find the Size of the Star</div>
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-left arrow"></span></div>
       </div>
     </div>

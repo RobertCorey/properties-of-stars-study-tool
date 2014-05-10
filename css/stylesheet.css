@@ -3,6 +3,7 @@
 	height: 4em;
 	font-size: 1.25em;
 	text-align: center;
+	overflow: hidden;
 }
 .solved{
 	background-color: #4DFA90;
@@ -34,6 +35,7 @@
 	z-index: 1;
 	width: 90%;
 	height: 80%;
+	overflow:scroll;
 }
 #exitButton{
 	float:right;
@@ -48,7 +50,7 @@
 	width: 45%;
 }
 .popupSteps{
-	min-width: 45%;
+	max-width: 45%;
 	float: right;
 }
 
