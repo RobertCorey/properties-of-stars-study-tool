@@ -1,0 +1,56 @@
+.bubble{
+	border: solid black 1px;
+	height: 4em;
+	font-size: 1.25em;
+	text-align: center;
+	overflow: hidden;
+}
+.solved{
+	background-color: #4DFA90;
+}
+.open{
+	background-color: #FABE4D;
+}
+.closed{
+	background-color: #FF5468;
+	opacity: 0.6;
+}
+.spacer{
+	height: 1em;
+}
+.arrow{
+	margin-left: 45%;
+	font-size: 3em;
+}
+.popup{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 2%;
+	background-color: white;
+	border: solid black 20px;
+	z-index: 1;
+	width: 90%;
+	height: 80%;
+	overflow:scroll;
+}
+#exitButton{
+	float:right;
+	font-size: 2em;
+}
+.popupContent{
+	width: 45%;
+	float: left;
+}
+.popupQuestion{
+	display: inline-block;
+	width: 45%;
+}
+.popupSteps{
+	max-width: 45%;
+	float: right;
+}
+
