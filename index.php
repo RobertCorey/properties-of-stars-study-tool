@@ -34,7 +34,7 @@
       </div>
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1"><span class="glyphicon glyphicon-arrow-down arrow"></span></div>
-        <div class="col-xs-3 col-xs-offset-1 bubble open" id="findDistance">Find the Distance <em>(d)</em></div>
+        <div class="col-xs-3 col-xs-offset-1 bubble open" id="distance">Find the Distance <em>(d)</em></div>
         <div class="col-xs-3 col-xs-offset-1 bubble open">Find the Temperature <em>(T)</em></div>
       </div>
       <div class="row">

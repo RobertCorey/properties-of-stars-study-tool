@@ -39,6 +39,9 @@ function generatePopup (name,questions,answers,steps) {
 	//add listener to steps button
 	document.getElementById(stepsID).addEventListener("click",
 		function(){ generateSteps(steps) }, false);
+	//Add listener to submit button
+	document.getElementById(answerButtonID).addEventListener("click",
+		function(){ validateAnswers(name,answers) }, false);
 	return true;
 }
 function generateQuestions (questions){
@@ -55,7 +58,11 @@ function generateQuestions (questions){
 		questionInput.className = "popupQuestion";
 		questionInput.id = id;
 		element.appendChild(questionInput);
-		//create space 
+		//span for validation
+		var id = "validate".concat(i);
+		var questionValidate = document.createElement('span');
+		questionValidate.id = id;
+		element.appendChild(questionValidate);
 	}
 	return element;
 }
@@ -73,12 +80,30 @@ function generateSteps (steps){
 		target.appendChild(stepsElement);
 	}
 }
-function validateAnswers (answers){
-	
+function validateAnswers (parent,answers){
+	var pass = true;
+	for (var i = 0; i < answers.length; i++) {
+		var key = "question".concat(i);
+		var userAnswer = document.getElementById(key).value;
+		console.log(userAnswer);
+		key = "validate".concat(i);
+		var validateElemement = document.getElementById(key);
+		if (answers[i] === userAnswer) {
+			validateElemement.className = "glyphicon glyphicon-ok solved";
+		}else{
+			validateElemement.className = "glyphicon glyphicon-remove closed";
+			pass = false;
+		}
+	}
+	if (pass) {
+		var parentElement = document.getElementById(parent);
+		var updatedClassString = parentElement.className.replace("open","solved");
+		parentElement.className = updatedClassString;
+	}
 }
 window.onload = function(){
 	var questions = ["What is the distance in parsecs?","What is the distance in light years?"];
-	var answers = [1.3,4.2];
+	var answers = ["1.3","4.2"];
 	var steps = '<span class="h3">Find the distance in Parsecs</span> \
 		<ul> \
 		  <li>Use the formula: Star\'s distance (in pc) = 1 / parallax</li> \
@@ -91,7 +116,7 @@ window.onload = function(){
 		  <li>The ratio of parsecs to light years is 3.25 parsecs = 1 light year</li> \
 		  <li>e.g 3.25 * 1.35 ~= 4.39 </li> \
 		</ul>';
-	document.getElementById('findDistance').addEventListener(
+	document.getElementById('distance').addEventListener(
 			"click",
 			function(){ generatePopup("distance",questions,answers,steps) },
 			false);
